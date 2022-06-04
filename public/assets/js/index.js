@@ -6,6 +6,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+const { note } = require('../db/db.json')
 
 app.use(express.static('public'));
 
@@ -190,5 +191,7 @@ if (window.location.pathname === '/notes') {
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
+
+module.exports = router;
 
 getAndRenderNotes();
