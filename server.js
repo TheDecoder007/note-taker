@@ -20,12 +20,20 @@ app.use(express.static('public'));
 
 //GET request to get notes from db.json 
 router.get('/api/notes', (req, res) =>{
-    // let results = notes;
+    //let was commented out and I wrote if statement
+    let results = notes;
+    if (req.query) {
+        results=filterByQuery(req.query, results);
+    }
     res.json(notes);
 });
 
 router.get('/api/note', (req, res) =>{
     let results = note;
+    //I wrote if statement
+    if (req.query) {
+        results = filterByQuery(req.query, results);
+    }
     res.json(results);
 });
 
