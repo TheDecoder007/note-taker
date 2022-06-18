@@ -7,6 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 const { note } = require('../../../db/db.json')
+const { notes } = require('../../../db/db.json')
+
 
 app.use(express.static('public'));
 

@@ -20,12 +20,13 @@ app.use(express.static('public'));
 
 //GET request to get notes from db.json 
 router.get('/api/notes', (req, res) =>{
-    //let was commented out and I wrote if statement
+    // I wrote if statement
     let results = notes;
     if (req.query) {
-        results=filterByQuery(req.query, results);
+        results = filterByQuery(req.query, results);
     }
-    res.json(notes);
+    res.json(results);
+    
 });
 
 router.get('/api/note', (req, res) =>{
@@ -55,11 +56,19 @@ function createNewNote(body, notesArray) {
     return note;
 }
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+  });
 
+  app.get('/api/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+  });
 
+  app.get('/api/note', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+  });
 
-
-
+  
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}`);
 });
