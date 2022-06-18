@@ -1,17 +1,3 @@
-const fs = require("fs");
-const path = require("path");
-const router = require('express').Router();
-
-const express = require('express');
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
-const { note } = require('../../../db/db.json')
-const { notes } = require('../../../db/db.json')
-
-
-app.use(express.static('public'));
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -193,13 +179,5 @@ if (window.location.pathname === '/notes') {
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
-
-//Code I added. what is '/notes'? its in the same file...
-router.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/notes.html'));
-});
-
-
-module.exports = router;
 
 getAndRenderNotes();
