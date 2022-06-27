@@ -10,5 +10,9 @@
   {
     "title": "hello",
     "text": "world"
+  },
+  {
+    "title": "New note being written",
+    "text": "Some text for the new note being written"
   }
 ]
