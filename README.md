@@ -9,7 +9,7 @@
 ## Links
 GitHub link https://github.com/TheDecoder007/note-taker
 
-Deploy link: https://thedecoder007.github.io/super-disco/
+Heroku link: https://immense-journey-17332.herokuapp.com/
 
 ### Other Info
 * displays past notes
