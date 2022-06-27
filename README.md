@@ -18,4 +18,4 @@ Deploy link: https://thedecoder007.github.io/super-disco/
 
 ## Screenshot
 
-![Screenshot (710)](https://user-images.githubusercontent.com/101135574/166169927-3a5a2a20-86b3-445b-b1b4-755a2d2e36d3.png)
+![Screenshot (801)](https://user-images.githubusercontent.com/101135574/176009110-223ff205-a622-4ced-879b-828ba8a1fdd5.png)
